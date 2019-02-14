@@ -4,6 +4,10 @@ pipeline {
         buildDiscarder logRotator(numToKeepStr: '3')
     }
 
+    triggers {
+        gitlab(triggerOnPush: true, triggerOnMergeRequest: true, branchFilterType: 'All')
+    }
+
     agent any
     
     stages {
