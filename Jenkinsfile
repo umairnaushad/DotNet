@@ -1,6 +1,6 @@
 
 pipeline {
-    opstions {
+    options {
         buildDiscarder logRotator(numToKeepStr: '3')
     }
 
