@@ -10,7 +10,10 @@ pipeline {
         }
 
         stage("Git Checkout") {
-            git branch: 'master', credentialsId: 'umairnaushad@gmail.com', url: 'https://github.com/umairnaushad/DotNet.git' 
+            steps {
+                git branch: 'master', credentialsId: 'umairnaushad@gmail.com', url: 'https://github.com/umairnaushad/DotNet.git' 
+            }
+            
             //git credentialsId: '024bccc0-b60c-4b11-a116-f34ce28bd470', url: 'https://github.com/umairnaushad/DotNet.git'
         }
     }
