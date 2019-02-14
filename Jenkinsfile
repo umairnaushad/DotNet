@@ -12,7 +12,7 @@ pipeline {
 
         stage("Build") {
             steps {
-                bat 'nuget restore "\Source\VS Solution\Desktop Application.sln"''
+                bat 'nuget restore "Source\VS Solution\Desktop Application.sln"'
             }
         }
     }
