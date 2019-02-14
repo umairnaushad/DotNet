@@ -1,5 +1,9 @@
 
 pipeline {
+    opstions {
+        buildDiscarder logRotator(numToKeepStr: '3')
+    }
+
     agent any
     
     stages {
