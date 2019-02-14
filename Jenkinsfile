@@ -17,7 +17,7 @@ pipeline {
         stage("Build") {
             steps {
                 //bat 'nuget restore "/Source/VS Solution/Desktop Application.sln"'
-                bat "msbuild.exe \"${WORKSPACE}\\Source\\VS Solution\\Desktop Application.sln" /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
+                bat "msbuild.exe \"${WORKSPACE}\\Source\\VS Solution\\Desktop Application.sln\" /p:Configuration=Release /p:Platform=\"Any CPU\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}"
             }
         }
     }
