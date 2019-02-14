@@ -1,0 +1,9 @@
+
+pipeline {
+    stages {
+        stage("Stage 1") {
+            echo "Testing Stage 1"
+
+        }
+    }
+}
