@@ -1,2 +1,2 @@
 # DotNet
-C# sample project pipeline 1
+C# sample project pipeline
