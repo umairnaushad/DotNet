@@ -2,7 +2,9 @@
 pipeline {
     stages {
         stage("Stage 1") {
-            echo "My first pipeline"
+            steps{
+                echo "My first pipeline"
+            }
         }
     }
 }
