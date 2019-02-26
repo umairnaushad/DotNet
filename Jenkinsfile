@@ -14,7 +14,6 @@ pipeline {
                 script {
                     tagName=env.BRANCH_NAME
                     echo 'BRANCH_NAME: ' + ${tagName}
-                    echo sh(returnStdout: true, script: 'env')
                 }                
             }
         }
