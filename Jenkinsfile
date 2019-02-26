@@ -8,7 +8,7 @@ pipeline {
             steps {
                 echo "Welcome "
                 echo 'Pulling...' + env.BRANCH_NAME
-                sh 'printenv'
+                echo sh(returnStdout: true, script: 'env')
             }
         }
     }
