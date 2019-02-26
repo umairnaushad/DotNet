@@ -12,7 +12,7 @@ pipeline {
         stage("Pipeline Info") {
             steps {
                 tagName=env.BRANCH_NAME
-                echo 'BRANCH_NAME: ' + tagName
+                echo 'BRANCH_NAME: ' + ${tagName}
                 echo sh(returnStdout: true, script: 'env')
             }
         }
