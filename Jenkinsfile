@@ -13,7 +13,8 @@ pipeline {
             steps {
                 script {
                     tagName=env.BRANCH_NAME
-                    echo 'BRANCH_NAME: ' + ${tagName}
+                    echo 'BRANCH_NAME: ' + env.BRANCH_NAME
+                    echo 'TAG_NAME: ' + env.TAG_NAME
                 }                
             }
         }
