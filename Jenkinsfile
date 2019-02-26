@@ -1,3 +1,4 @@
+def tagName
 
 pipeline {
 
@@ -10,8 +11,8 @@ pipeline {
     stages {
         stage("Pipeline Info") {
             steps {
-                echo "Welcome "
-                echo 'Pulling...' + env.BRANCH_NAME
+                tagName=env.BRANCH_NAME
+                echo 'BRANCH_NAME: ' + tagName
                 echo sh(returnStdout: true, script: 'env')
             }
         }
