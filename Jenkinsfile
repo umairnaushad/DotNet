@@ -1,4 +1,11 @@
+def props
+def gitRepo
+def gitBranch
+def deploymentType
+def environment
+def isAdminTool, isInterlayer, isWeb, isDatabase 
 def tagName
+
 
 pipeline {
 
@@ -12,9 +19,13 @@ pipeline {
         stage("Pipeline Info") {
             steps {
                 script {
-                    tagName=env.BRANCH_NAME
-                    echo 'BRANCH_NAME: ' + env.BRANCH_NAME
-                    echo 'TAG_NAME: ' + env.TAG_NAME
+                    props = readProperties file:'system.properties'
+                    gitRepo=props.gitRepo
+                    gitBranch=props.gitBranch                    
+                    tagName = props.tagName
+                    echo 'gitRepo: ' + gitRepo
+                    echo 'gitBranch: ' + gitBranch
+                    echo 'tagName: ' + tagName
                 }                
             }
         }
